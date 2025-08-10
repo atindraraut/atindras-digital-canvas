@@ -43,7 +43,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
