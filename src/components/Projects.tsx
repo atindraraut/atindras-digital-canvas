@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
@@ -7,38 +8,42 @@ const Projects = () => {
     {
       title: "MapMyMoments - AI Travel Planning Platform",
       description: "Built an intelligent travel planning platform enabling collaborative route creation with AI-powered photo organization and real-time sharing capabilities. Supports 1,000+ concurrent users with 99.9% uptime.",
-      technologies: ["React", "TypeScript", "Go", "MongoDB", "AWS S3", "Claude AI", "Google Places API"],
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop",
+      technologies: ["React", "TypeScript", "Go", "MongoDB", "AWS S3", "AI Integration", "Google Places API"],
+      image: "/src/assets/image.png",
       github: "#",
-      live: "#",
-      featured: true
+      live: "https://mapmymoments.in/",
+      featured: true,
+      isPrivateRepo: true
     },
     {
       title: "Infrastructure Automation System",
       description: "Developed comprehensive Terraform scripts for streamlined deployment of Nginx, applications, and databases, reducing setup time by 80% with one-click environment management.",
       technologies: ["Terraform", "AWS", "Docker", "Nginx", "CI/CD", "GitHub Actions"],
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      github: "#",
+      github: "https://github.com/atindraraut/vpc_deployment_template/tree/c4d58c3509a84a3bc52044688bd97f0547b68509",
       live: "#",
-      featured: true
+      featured: true,
+      hasLiveDemo: false
     },
     {
-      title: "Hybrid Serverless Architecture",
-      description: "Implemented hybrid serverless/server architecture using AWS Lambda and Step Functions, reducing infrastructure costs by 70% while maintaining high availability.",
-      technologies: ["AWS Lambda", "Step Functions", "Node.js", "Serverless", "CloudWatch"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-      github: "#",
+      title: "HubSpot CRM Integration Platform",
+      description: "Built a comprehensive HubSpot CRM integration with automated webhook notifications, custom contact properties, and REST API endpoints. Features real-time contact ownership change triggers and batch operations with robust error handling.",
+      technologies: ["Node.js", "Express.js", "HubSpot API v3", "REST APIs", "Webhook Automation", "CRM Integration"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      github: "https://github.com/atindraraut/hubspot-crm-integration",
       live: "#",
-      featured: false
+      featured: false,
+      hasLiveDemo: false
     },
     {
       title: "B2B Credit Management System",
       description: "Contributed to platform development implementing ML-based credit risk prediction features and RESTful APIs, improving team productivity by 40%.",
       technologies: ["Spring Boot", "Java", "Machine Learning", "REST APIs", "Microservices"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      github: "#",
+      github: "https://github.com/atindraraut/collections_management_system",
       live: "#",
-      featured: false
+      featured: false,
+      hasLiveDemo: false
     }
   ];
 
@@ -93,14 +98,45 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-4">
-                  <Button variant="outline" size="sm" className="smooth-transition hover:border-primary hover:text-primary">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="smooth-transition hover:glow-effect">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
+                  {project.isPrivateRepo ? (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          disabled
+                          className="text-muted-foreground cursor-not-allowed"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Private Repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ) : (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="smooth-transition hover:border-primary hover:text-primary"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </Button>
+                  )}
+                  
+                  {project.hasLiveDemo !== false && (
+                    <Button 
+                      size="sm" 
+                      className="smooth-transition hover:glow-effect"
+                      onClick={() => window.open(project.live, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>
