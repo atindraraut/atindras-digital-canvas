@@ -17,9 +17,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="flex justify-center max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8 animate-fade-up">
+          <div className="space-y-8 animate-fade-up max-w-2xl">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Get in Touch</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -59,10 +59,16 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-8 p-4 bg-muted/20 rounded-lg border border-border/50">
+              <p className="text-sm text-muted-foreground text-center">
+                📧 Contact form coming soon! For now, feel free to reach out directly via email or phone.
+              </p>
+            </div>
           </div>
 
-          {/* Contact Form */}
-          <Card className="glass-card p-8 animate-fade-up border-border/50" style={{ animationDelay: '0.2s' }}>
+          {/* Contact Form - Hidden for now */}
+          {/* <Card className="glass-card p-8 animate-fade-up border-border/50" style={{ animationDelay: '0.2s' }}>
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -126,7 +132,7 @@ const Contact = () => {
                 <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>
