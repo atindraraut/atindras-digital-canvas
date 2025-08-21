@@ -9,7 +9,7 @@ const Projects = () => {
       title: "MapMyMoments - AI Travel Planning Platform",
       description: "Built an intelligent travel planning platform enabling collaborative route creation with AI-powered photo organization and real-time sharing capabilities. Supports 1,000+ concurrent users with 99.9% uptime.",
       technologies: ["React", "TypeScript", "Go", "MongoDB", "AWS S3", "AI Integration", "Google Places API"],
-      image: "/src/assets/image.png",
+      image: "/assets/image.png",
       github: "#",
       live: "https://mapmymoments.in/",
       featured: true,

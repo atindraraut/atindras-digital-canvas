@@ -14,7 +14,7 @@ const Hero = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/src/resume/Atindra_Resume.pdf';
+    link.href = '/resume/Atindra_Resume.pdf';
     link.download = 'Atindra_Resume.pdf';
     document.body.appendChild(link);
     link.click();
