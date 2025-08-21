@@ -5,37 +5,37 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with React, Node.js, and AWS. Features include real-time inventory, secure payments, and admin dashboard.",
-      technologies: ["React", "Node.js", "AWS Lambda", "DynamoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      title: "MapMyMoments - AI Travel Planning Platform",
+      description: "Built an intelligent travel planning platform enabling collaborative route creation with AI-powered photo organization and real-time sharing capabilities. Supports 1,000+ concurrent users with 99.9% uptime.",
+      technologies: ["React", "TypeScript", "Go", "MongoDB", "AWS S3", "Claude AI", "Google Places API"],
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop",
       github: "#",
       live: "#",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, file sharing, and team communication features.",
-      technologies: ["Next.js", "TypeScript", "Socket.io", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      title: "Infrastructure Automation System",
+      description: "Developed comprehensive Terraform scripts for streamlined deployment of Nginx, applications, and databases, reducing setup time by 80% with one-click environment management.",
+      technologies: ["Terraform", "AWS", "Docker", "Nginx", "CI/CD", "GitHub Actions"],
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
       github: "#",
       live: "#",
       featured: true
     },
     {
-      title: "Analytics Dashboard",
-      description: "Real-time analytics dashboard for monitoring business metrics with interactive charts and data visualization.",
-      technologies: ["React", "D3.js", "Express", "MongoDB", "AWS"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      title: "Hybrid Serverless Architecture",
+      description: "Implemented hybrid serverless/server architecture using AWS Lambda and Step Functions, reducing infrastructure costs by 70% while maintaining high availability.",
+      technologies: ["AWS Lambda", "Step Functions", "Node.js", "Serverless", "CloudWatch"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
       github: "#",
       live: "#",
       featured: false
     },
     {
-      title: "Social Media API",
-      description: "RESTful API for a social media platform with JWT authentication, image upload, and real-time messaging.",
-      technologies: ["Node.js", "Express", "JWT", "Cloudinary", "Redis"],
-      image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&h=400&fit=crop",
+      title: "B2B Credit Management System",
+      description: "Contributed to platform development implementing ML-based credit risk prediction features and RESTful APIs, improving team productivity by 40%.",
+      technologies: ["Spring Boot", "Java", "Machine Learning", "REST APIs", "Microservices"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       github: "#",
       live: "#",
       featured: false
@@ -107,11 +107,6 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="smooth-transition hover:border-primary hover:text-primary">
-            View All Projects
-          </Button>
-        </div>
       </div>
     </section>
   );

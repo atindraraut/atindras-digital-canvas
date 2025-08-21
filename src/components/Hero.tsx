@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, BookOpen } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, BookOpen, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -10,6 +10,15 @@ const Hero = () => {
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/src/resume/Atindra_Resume.pdf';
+    link.download = 'Atindra_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -27,8 +36,17 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="sm" 
+            onClick={downloadResume}
+            className="smooth-transition hover:border-primary hover:text-primary hover:bg-primary/10 glass-card text-foreground"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Resume
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
             onClick={() => navigate('/articles')}
-            className="smooth-transition hover:border-primary hover:text-primary glass-card"
+            className="smooth-transition hover:border-primary hover:text-primary hover:bg-primary/10 glass-card text-foreground"
           >
             <BookOpen className="w-4 h-4 mr-2" />
             Articles
@@ -39,14 +57,15 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center space-y-6 animate-fade-up">
           <div className="space-y-2">
-            <p className="text-lg text-muted-foreground tracking-wider uppercase">Full Stack Developer</p>
+            <p className="text-lg text-muted-foreground tracking-wider uppercase">Software Development Engineer</p>
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
               Hi, I'm <span className="text-gradient">Atindra</span>
             </h1>
           </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I build exceptional digital experiences with <span className="text-primary font-semibold">React</span>, 
+            Software Engineer with 3+ years of experience building scalable web applications and distributed systems.
+            Passionate about solving complex problems with <span className="text-primary font-semibold">React</span>, 
             <span className="text-primary font-semibold"> Node.js</span>, and 
             <span className="text-primary font-semibold"> AWS</span>
           </p>
@@ -57,10 +76,20 @@ const Hero = () => {
               <ArrowDown className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </Button>
             <div className="flex gap-4">
-              <Button variant="outline" size="lg" className="smooth-transition hover:border-primary hover:text-primary">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="smooth-transition hover:border-primary hover:text-primary"
+                onClick={() => window.open('https://github.com/atindraraut', '_blank')}
+              >
                 <Github className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg" className="smooth-transition hover:border-primary hover:text-primary">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="smooth-transition hover:border-primary hover:text-primary"
+                onClick={() => window.open('https://linkedin.com/in/atindra-raut-202286137', '_blank')}
+              >
                 <Linkedin className="w-5 h-5" />
               </Button>
               <Button 

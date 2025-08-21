@@ -4,33 +4,33 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skills = [
     {
-      category: "Frontend",
+      category: "Languages",
       technologies: [
-        { name: "React.js", level: "Expert", icon: "⚛️" },
-        { name: "TypeScript", level: "Advanced", icon: "🔷" },
-        { name: "Next.js", level: "Advanced", icon: "▲" },
-        { name: "Tailwind CSS", level: "Expert", icon: "🎨" },
-        { name: "JavaScript ES6+", level: "Expert", icon: "💛" },
+        { name: "JavaScript (Node.js)", level: "Expert", icon: "" },
+        { name: "Python", level: "Advanced", icon: "" },
+        { name: "Java", level: "Advanced", icon: "" },
+        { name: "SQL", level: "Advanced", icon: "" },
+        { name: "Go", level: "Intermediate", icon: "" },
       ]
     },
     {
-      category: "Backend",
+      category: "Frontend & Frameworks",
       technologies: [
-        { name: "Node.js", level: "Expert", icon: "🟢" },
-        { name: "Express.js", level: "Advanced", icon: "🚂" },
-        { name: "GraphQL", level: "Intermediate", icon: "🔷" },
-        { name: "REST APIs", level: "Expert", icon: "🌐" },
-        { name: "MongoDB", level: "Advanced", icon: "🍃" },
+        { name: "React", level: "Expert", icon: "" },
+        { name: "TypeScript", level: "Advanced", icon: "" },
+        { name: "Spring Boot", level: "Advanced", icon: "" },
+        { name: "Node.js", level: "Expert", icon: "" },
+        { name: "Kafka", level: "Advanced", icon: "" },
       ]
     },
     {
       category: "Cloud & DevOps",
       technologies: [
-        { name: "AWS", level: "Advanced", icon: "☁️" },
-        { name: "Docker", level: "Intermediate", icon: "🐳" },
-        { name: "CI/CD", level: "Advanced", icon: "🔄" },
-        { name: "Lambda", level: "Advanced", icon: "λ" },
-        { name: "S3 & CloudFront", level: "Expert", icon: "📦" },
+        { name: "AWS", level: "Expert", icon: "☁️" },
+        { name: "Terraform", level: "Advanced", icon: "🏗️" },
+        { name: "Docker", level: "Advanced", icon: "🐳" },
+        { name: "Linux", level: "Advanced", icon: "🐧" },
+        { name: "Nginx", level: "Advanced", icon: "🌐" },
       ]
     }
   ];
@@ -89,9 +89,9 @@ const Skills = () => {
           <h3 className="text-xl font-semibold mb-6 text-foreground">Also experienced with</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              "Redux", "Socket.io", "Jest", "Cypress", "Webpack", "Vite", 
-              "Firebase", "Stripe API", "Prisma", "Material-UI", "Vue.js",
-              "Git", "GitHub Actions", "Linux", "Nginx", "Redis", "Python"
+              "Git", "GitHub Actions", "RESTful APIs", "CI/CD", "Microservices", 
+              "Event-driven Architecture", "AWS Lambda", "Step Functions", "Confluent Kafka", 
+              "MongoDB", "AWS S3", "CloudFront", "JWT Authentication", "Google OAuth", "Redis"
             ].map((tech) => (
               <Badge 
                 key={tech} 
